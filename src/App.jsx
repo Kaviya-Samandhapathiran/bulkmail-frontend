@@ -50,13 +50,14 @@ function App() {
   }
 
   return (
-    <div className='bg-[#DE1E73] p-4 m-6 font-sans text-center text-white rounded-md'>
+    <div className='bg-[#0A1227]'>
+    <div className='bg-[url(/bg.webp)] p-6 m-auto flex flex-wrap justify-center items-center w-fit font-sans text-center text-white rounded-md'>
       <div className='bg-[#0A1227] text-center rounded-lg'>
-        <h1 className='text-white text-4xl font-medium px-5 py-3'>Bulk Mail📧</h1>
-        <h1 className='text-xl text-amber-300 font-medium px-5 py-3'>We can help your business with sending multiple emails at once</h1>
+        <h1 className='text-white text-4xl font-medium px-5 py-3'>ExpressMailer📧</h1>
+        <h1 className='text-xl text-amber-300 font-medium px-5 py-3 text-wrap'>We can help your business with sending multiple emails at once</h1>
         <div className='text-center flex flex-col items-center gap-5 my-4'>
           <h1 className='text-xl font-medium text-white'>Drag and Drop your mail👇</h1>
-          <textarea onChange={handlemsg} value={msg} className='bg-white outline-none w-[70%] h-50 p-2 border border-black rounded-md text-black' placeholder='Enter the Email text..'></textarea>
+          <textarea onChange={handlemsg} value={msg} className='bg-white outline-none w-[70%] h-55 p-2 border border-black rounded-md text-black' placeholder='Enter the Email text..'></textarea>
           <div className='flex justify-center items-center pl-30'>
             <span className='text-3xl'>📂</span>
             <input type="file" className='text-white text-xl cursor-pointer' onChange={handlefile}></input>
@@ -65,6 +66,7 @@ function App() {
         <p className='text-xl'>Total emails in the file: {emaillist.length}</p>
         <button onClick={send} className='text-xl bg-green-700 cursor-pointer text-white p-2 my-3 rounded-md'>{status ? "Sending..." : "Send"}</button>
       </div>
+    </div>
     </div>
   )
 }
